@@ -110,9 +110,9 @@ body {
 }
 .clock {
   position: absolute;
-  width: 70vw;
+  width: 120vw;
   top: 50%;
-  left: 15vw;
+  left: 1vw;
   transform: translateY(-50%);
   perspective: 100vw;
   perspective-origin: 50% 50%;

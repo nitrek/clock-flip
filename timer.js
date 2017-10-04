@@ -33,11 +33,19 @@ function updateGroup(group, n, flip){
 }
 
 function setTime(flip){
+	var endtime = new Date(1507271412567);
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var miliseconds = Math.floor(Math.random()*100);
+	var seconds = Math.floor((t / 1000) % 60);
+	var minutes = Math.floor((t / 1000 / 60) % 60);
+	var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+	var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
 	var t = new Date();
-	updateGroup('hour', t.getHours(), flip);
-	updateGroup('min', t.getMinutes(), flip);
-	updateGroup('sec', t.getSeconds(), flip);
-	updateGroup('milisec', t.getMilliseconds(), flip);
+	updateGroup('hour', hours, flip);
+	updateGroup('min', minutes, flip);
+	updateGroup('sec', seconds, flip);
+	updateGroup('msec', miliseconds, flip);
 }
 
 $(document).ready(function(){
@@ -45,6 +53,6 @@ $(document).ready(function(){
 	setTime(false);
 	setInterval(function(){
 		setTime(true);
-	}, 100);
+	}, 10);
 	
 });
