@@ -33,7 +33,7 @@ function updateGroup(group, n, flip){
 }
 
 function setTime(flip){
-	var endtime = new Date(1507271412567);
+	var endtime = new Date(1507361400000);
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var miliseconds = Math.floor(Math.random()*100);
 	var seconds = Math.floor((t / 1000) % 60);
