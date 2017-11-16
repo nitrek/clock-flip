@@ -11,3 +11,4 @@ grep 'alert' -F /usr/local/snort/rules/* -c| sort -t: -n -k2
 cd ~/corda/build/nodes/Controller
 nohup java -Xmx4g -XX:ParallelGCThreads=1 -jar corda.jar &> node.out&
 nohup java -jar corda-webserver.jar &> webserver.out&
+cat /proc/sys/vm/max_map_count 
