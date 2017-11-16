@@ -1,0 +1,42 @@
+This Corda-specific web server is deprecated and will be removed in future.
+Please switch to a regular web framework like Spring, J2EE or Play Framework.
+
+Logs can be found in /home/ubuntu/corda/build/nodes/Instance304/logs/web
+Starting as webserver: localhost:20304
+[1;31mE 12:21:03+0000 [main] internal.NodeWebServer.retryConnectLocalRpc - Cannot start WebServer
+[m java.lang.OutOfMemoryError: unable to create new native thread
+	at java.lang.Thread.start0(Native Method) ~[?:1.8.0_151]
+	at java.lang.Thread.start(Thread.java:717) ~[?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:957) ~[?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor.ensurePrestart(ThreadPoolExecutor.java:1603) ~[?:1.8.0_151]
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:334) ~[?:1.8.0_151]
+	at java.util.concurrent.ScheduledThreadPoolExecutor.scheduleAtFixedRate(ScheduledThreadPoolExecutor.java:573) ~[?:1.8.0_151]
+	at net.corda.client.rpc.internal.RPCClientProxyHandler.start(RPCClientProxyHandler.kt:180) ~[corda-rpc-1.0.0.jar:?]
+	at net.corda.client.rpc.internal.RPCClient$start$1.invoke(RPCClient.kt:116) ~[corda-rpc-1.0.0.jar:?]
+	at net.corda.client.rpc.internal.RPCClient$start$1.invoke(RPCClient.kt:82) ~[corda-rpc-1.0.0.jar:?]
+	at net.corda.core.internal.InternalUtilsKt.logElapsedTime(InternalUtils.kt:168) ~[corda-core-1.0.0.jar:?]
+	at net.corda.core.internal.InternalUtilsKt.logElapsedTime(InternalUtils.kt:160) ~[corda-core-1.0.0.jar:?]
+	at net.corda.client.rpc.internal.RPCClient.start(RPCClient.kt:103) ~[corda-rpc-1.0.0.jar:?]
+	at net.corda.client.rpc.CordaRPCClient.start(CordaRPCClient.kt:100) ~[corda-rpc-1.0.0.jar:?]
+	at net.corda.webserver.internal.NodeWebServer.connectLocalRpcAsNodeUser(NodeWebServer.kt:210) ~[corda-webserver-impl-1.0.0.jar:?]
+	at net.corda.webserver.internal.NodeWebServer.retryConnectLocalRpc(NodeWebServer.kt:188) [corda-webserver-impl-1.0.0.jar:?]
+	at net.corda.webserver.internal.NodeWebServer.start(NodeWebServer.kt:45) [corda-webserver-impl-1.0.0.jar:?]
+	at net.corda.webserver.WebServer.main(WebServer.kt:64) [corda-webserver-impl-1.0.0.jar:?]
+Exception in thread "main" java.lang.OutOfMemoryError: unable to create new native thread
+	at java.lang.Thread.start0(Native Method)
+	at java.lang.Thread.start(Thread.java:717)
+	at java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:957)
+	at java.util.concurrent.ThreadPoolExecutor.ensurePrestart(ThreadPoolExecutor.java:1603)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:334)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.scheduleAtFixedRate(ScheduledThreadPoolExecutor.java:573)
+	at net.corda.client.rpc.internal.RPCClientProxyHandler.start(RPCClientProxyHandler.kt:180)
+	at net.corda.client.rpc.internal.RPCClient$start$1.invoke(RPCClient.kt:116)
+	at net.corda.client.rpc.internal.RPCClient$start$1.invoke(RPCClient.kt:82)
+	at net.corda.core.internal.InternalUtilsKt.logElapsedTime(InternalUtils.kt:168)
+	at net.corda.core.internal.InternalUtilsKt.logElapsedTime(InternalUtils.kt:160)
+	at net.corda.client.rpc.internal.RPCClient.start(RPCClient.kt:103)
+	at net.corda.client.rpc.CordaRPCClient.start(CordaRPCClient.kt:100)
+	at net.corda.webserver.internal.NodeWebServer.connectLocalRpcAsNodeUser(NodeWebServer.kt:210)
+	at net.corda.webserver.internal.NodeWebServer.retryConnectLocalRpc(NodeWebServer.kt:188)
+	at net.corda.webserver.internal.NodeWebServer.start(NodeWebServer.kt:45)
+	at net.corda.webserver.WebServer.main(WebServer.kt:64)
