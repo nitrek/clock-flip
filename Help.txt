@@ -1,10 +1,13 @@
-from Chris Akers (External) (privately):
 cat /proc/sys/kernel/pid_max
-from Chris Akers (External) to everyone:
-cat /proc/sys/kernel/pid_max
-from Chris Akers (External) to everyone:
 cat /etc/systemd/logind.conf
-from Rick Parker (External) to everyone:
 cat /proc/sys/vm/max_map_count
 from iLabPC (External) (privately):
 kill $(ps aux | grep "java" | grep -v 'grep' | awk '{print $2}')
+cat /proc/sys/kernel/threads-max
+
+
+grep 'alert' -F /usr/local/snort/rules/* -c| sort -t: -n -k2
+
+cd ~/corda/build/nodes/Controller
+nohup java -Xmx4g -XX:ParallelGCThreads=1 -jar corda.jar &> node.out&
+nohup java -jar corda-webserver.jar &> webserver.out&
