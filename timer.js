@@ -44,7 +44,7 @@ function setTime(flip){
 	var t = new Date();
 	updateGroup('hour', hours, flip);
 	updateGroup('min', minutes, flip);
-	updateGroup('sec', seconds, flip);
+	updateGroup('sec', days, flip);
 	updateGroup('msec', miliseconds, flip);
 }
 
