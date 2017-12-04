@@ -42,9 +42,9 @@ function setTime(flip){
 	var days = Math.floor(t / (1000 * 60 * 60 * 24));
 
 	var t = new Date();
-	updateGroup('hour', hours, flip);
-	updateGroup('min', minutes, flip);
-	updateGroup('sec', days, flip);
+	updateGroup('hour', days, flip);
+	updateGroup('min', hours, flip);
+	updateGroup('sec', minutes, flip);
 	updateGroup('msec', miliseconds, flip);
 }
 
