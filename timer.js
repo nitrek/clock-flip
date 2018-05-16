@@ -45,7 +45,7 @@ function setTime(flip){
 	updateGroup('hour', days, flip);
 	updateGroup('min', hours, flip);
 	updateGroup('sec', minutes, flip);
-	updateGroup('msec', miliseconds, flip);
+	updateGroup('msec', seconds, flip);
 }
 
 $(document).ready(function(){
