@@ -53,6 +53,6 @@ $(document).ready(function(){
 	setTime(false);
 	setInterval(function(){
 		setTime(true);
-	}, 10);
+	}, 1);
 	
 });
